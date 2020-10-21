@@ -1,6 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SimpleEvent } from '../models/simpleEvent';
 import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
 import { of } from 'rxjs';
@@ -9,20 +8,6 @@ import { of } from 'rxjs';
     providedIn: 'root'
 })
 export class GHService {
-  simple = map((val: any[]) => {
-        let arr: SimpleEvent[] = [];
-        val.forEach(i => {
-            arr.push({
-                eventId: i.id,
-                eventType: i.type,
-                repo: i.repo.name,
-                username: i.actor.login,
-                avatarUrl: i.actor.avatar_url,
-                createdAt: i.created_at
-            } as SimpleEvent);
-        });
-        return arr;
-    });
   
   public logonSuccess$: EventEmitter<String>;
 

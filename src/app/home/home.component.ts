@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { SimpleEvent } from '../models/simpleEvent';
 import { GHService } from '../service/GHService';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
