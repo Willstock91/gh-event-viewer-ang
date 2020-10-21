@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid" style="margin-top: 50px;">
+  <h1 class="text-center">Event Details</h1>
+  <div class="text-center"><i *ngIf="loading" class="fa fa-circle-o-notch fa-spin loader"></i></div>
+  <div *ngIf="!loading">
+    <div class="row row-cols-1">
+      <div class="col text-center"><img class="square lg" [src]="selectedEvent.actor.avatar_url"/><strong> {{selectedEvent.actor.login}}</strong></div>
+    </div>
+    <hr>
+    <div class="row row-cols-1">
+        <div class="col text-center"><label>Event ID: </label> {{selectedEvent.id}}</div>
+    </div>
+    <div class="row row-cols-1">
+        <div class="col text-center"><label>Event Type: </label> {{selectedEvent.type}}</div>
+    </div>
+    <div class="row row-cols-1">
+        <div class="col text-center"><label>Repository: </label><span><a style="color:#337ab7;" (click)="navToRepo(selectedEvent.repo.name)"> {{selectedEvent.repo.name}}</a></span></div>
+    </div>
+    <div class="row row-cols-1">
+        <div class="col text-center"><label>Created At: </label> {{selectedEvent.created_at}}</div>
+    </div>
+  </div>
+</div>

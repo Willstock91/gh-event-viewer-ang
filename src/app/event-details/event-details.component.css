@@ -5,3 +5,13 @@ img.square{
     width: 30px;
     margin-right: 10px;
 }
+
+img.sqaure.md {
+    height: 50px;
+    width: 50px;
+}
+
+img.square.lg {
+    height: 75px;
+    width: 75px; 
+}
